@@ -16,17 +16,6 @@ def y_predict():
     '''
     x_test = [[float(x) for x in request.form.values()]]
     
-
-    if(x_test[0][0] == 0):
-        x_test[0][0]=0
-        x_test[0].insert(1,0)
-        
-    elif(x_test[0][0] == 1):
-        x_test[0][0]=1
-        x_test[0].insert(1,0)
-    else:
-        x_test[0][0]=0
-        x_test[0].insert(1,1)
     
     prediction = model.predict(x_test)
     print(prediction)
